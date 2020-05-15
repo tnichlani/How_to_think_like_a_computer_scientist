@@ -1,0 +1,19 @@
+# Write the inverse function day_num which is given a day name, and returns its number:
+
+
+day_dict = {                 # set up dictionary 
+'Sunday': 0,
+'Monday': 1,
+'Tuesday': 2,
+'Wednesday': 3,
+'Thursday': 4,
+'Friday': 5,
+'Saturday': 6,
+}
+ 
+def day_num_to_day_name(i): 
+	return dict(day_dict)[i]  # return the index value for the string(day) entered. 
+
+print(day_num_to_day_name('Monday'))
+
+
