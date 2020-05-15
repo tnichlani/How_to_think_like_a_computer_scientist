@@ -1,0 +1,21 @@
+# Write a function day_name that converts an integer number 0 to 6 into the name of a day. 
+# Assume day 0 is “Sunday”.
+# Once again, return None if the arguments to the function are not valid:
+
+
+days = ['sunday', 'monday', 'Tuesday', 'Wednesday', 'Thursday' , 'Friday' , 'Saturday'] # Make a list to iterate on 
+
+
+def day_name(i): # def function
+	try:
+		for day in days:
+			return days[i]
+	except IndexError: #incase user enters an int out of range
+		return None
+	except TypeError: #incase user enters string 
+		return None
+
+
+print(day_name('lksdgfl'))
+print(day_name(11))
+print(day_name(0))
