@@ -1,0 +1,23 @@
+
+# Can your day_add function already work with negative deltas? For example, -1 would be yesterday, or -7 would be a week ago:
+
+days = ['sunday' , 'monday' , 'tuesday' , 'wednesday' , 'thursday' , 'friday' , 'saturday']
+
+"""if given a day name and a number of days to wait, return the departure day name, should work 
+for the past as well. if given -7, should go back 7 days"""
+
+def what_day(x, y):
+	today = days.index(x) # 3
+	wait_period = y # 19
+	leaving_on_day_num = today + wait_period # 22
+	result = leaving_on_day_num % 7 # 22 % 7
+	departure_day = days[result] # monday 
+	return departure_day # final result 
+
+
+answer = what_day('saturday' , -7)
+
+print("You will be leaving on:" , answer.title() + '!')
+
+
+
