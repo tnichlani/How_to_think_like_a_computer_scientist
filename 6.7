@@ -1,0 +1,11 @@
+# Write a function to_secs that converts hours, minutes and seconds to a total number of seconds. Here are some tests that should pass:
+
+"""after converting all down to sconds will be straight forward"""
+
+def to_secs(h, m, s):
+	h = 3600 * h         # convert hours to seconds
+	m = 60 * m           # convert mins to seconds 
+	return h + m + s     # add them all up to get total seconds 
+
+
+print(to_secs(1, 55, 13), 'seconds') # = 6913 seconds 
