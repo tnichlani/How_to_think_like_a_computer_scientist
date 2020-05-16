@@ -14,10 +14,11 @@ month_days = {'jan'   : 31,
 			  'dec'   : 31,
 			  }
 
+
 """given a month name, return the number of days in that month"""
 
 def day_in_month(m):
-	return month_days.get(m)
+	return month_days[m]
 
 print(day_in_month('jan')) # = 31
 print(day_in_month('dec')) # = 31
