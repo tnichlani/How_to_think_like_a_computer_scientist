@@ -1,0 +1,20 @@
+# Write three functions that are the “inverses” of to_secs:
+
+# hours_in returns the whole integer number of hours represented by a total number of seconds.
+# minutes_in returns the whole integer number of left over minutes in a total number of seconds, once the hours have been taken out.
+# seconds_in returns the left over seconds represented by a total number of seconds.
+
+
+def hours_in(s):
+	hours = s // 3600
+	return hours 
+
+def minutes_in(s):
+	mins = (s % 3600) // 60
+	return mins
+
+def seconds_in(s):
+	remaining_secs = ((s % 3600) % 60)
+	return remaining_secs
+
+
