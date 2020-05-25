@@ -1,0 +1,17 @@
+Write a function that removes all occurrences of a given letter from a string:
+
+test(remove_letter("a", "apple") == "pple")
+test(remove_letter("a", "banana") == "bnn")
+test(remove_letter("z", "banana") == "banana")
+test(remove_letter("i", "Mississippi") == "Msssspp")
+test(remove_letter("b", "") = "")
+test(remove_letter("b", "c") = "c")
+
+
+
+def remove_letter(strng, alpha):
+  removed = ''
+  for ch in strng:
+    if ch != alpha:
+      removed += ch
+  return removed
