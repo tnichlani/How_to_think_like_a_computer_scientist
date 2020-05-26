@@ -1,0 +1,52 @@
+# Assign to a variable in your program a triple-quoted string that contains your favourite paragraph of text — 
+perhaps a poem, a speech, instructions to bake a cake, some inspirational verses, etc.
+
+# Write a function which removes all punctuation from the string, 
+# breaks the string into a list of words, and counts the number of words in your text that contain the letter “e”. 
+# Your program should print an analysis of the text like this:
+
+# Your text contains 243 words, of which 109 (44.8%) contain an "e".
+
+import string
+
+text = """Assign to a variable in your program a triple quoted string."""
+
+def remove(text):
+  t_without_punc = ''
+  for letter in text:
+    if letter not in string.punctuation:
+      t_without_punc += letter
+  return t_without_punc.split()
+
+print(remove(text))
+
+def word_counter(text):
+  num_of_words = len(text.split())
+  return num_of_words
+
+print(word_counter(text))
+
+def count_e(text):
+  e_counter = 0
+  for word in text:
+    if 'e' in word:
+      e_counter += 1
+  return e_counter
+
+print(count_e(text))
+
+def analysis(text):
+  e = float(count_e(text))
+  w = float(word_counter(text))
+  result = (e/w)*100
+  result = round(result,2)
+  return result
+
+print(analysis(text))
+
+print('Your text contains', a, "words of which" ,b, "words or", c, "% contains an 'e'. Boom!")
+
+
+
+
+
